@@ -2,7 +2,7 @@
 
 We all love DC BikeShare but it can be frustrating when stations are completely full or empty.  The DC BikeShare van drivers do a great job moving bikes around town, but what if good people like you and me could also move bikes around the city to even up their distribution?
 
-Introducing Bikeshare Samaritin. 
+Introducing Bikeshare Samaritan. 
 
 The idea is a simple web app to help you balance the bike load for stations near you.
 
