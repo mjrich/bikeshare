@@ -6,7 +6,20 @@ Introducing Bikeshare Samaritan.
 
 The idea is a simple web app to help you balance the bike load for stations near you.
 
-This `python` code curently works.  It pulls from the live [XML data feed of DC bikeshare](http://www.capitalbikeshare.com/data/stations/bikeStations.xml), then given a station number, it computes the nearest stations and tells you which ones need more bikes or could send bikes to the selected station.  
+This `python` code curently works.  It pulls from the live [XML data feed of DC bikeshare](http://www.capitalbikeshare.com/data/stations/bikeStations.xml), then given a station number, it computes the nearest stations and tells you which ones need more bikes or could send bikes to the selected station. 
+
+Output currentlylooks like this:
+
+    M St & Delaware Ave NE -> 1st & M St NE
+    Eckington Pl & Q St NE <- 1st & M St NE
+    3rd & H St NE <- 1st & M St NE
+    Columbus Circle / Union Station -> 1st & M St NE
+    6th & H St NE <- 1st & M St NE
+    North Capitol St & F St NW -> 1st & M St NE
+    ...
+    ...
+    ...
+
 
 Would like to now:
 * Create a nice front-end for it.
