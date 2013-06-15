@@ -1,19 +1,23 @@
 from xml.etree import ElementTree
 from math import sqrt
+import urllib2
+import StringIO
 
 
-#some pseudo-code for identifying bike samaratin legs
+#Compute distance from every other station and cache the ordered nearest station list for each station. Run once per (x period) to keep it up to date with new stations.
+
+#Computer ratio of bikes to empties.  Go from highest percentage to nearest lowest percentage. But give score by mulitplying by full size? Need to think more.
+
+#Then show which bikes need to be ridden (or driven) to which nearby stations.
 
 
-def prep_data(xmlfile):
-	with open(xmlfile, 'rt') as f:
-		tree = ElementTree.parse(f)
-		return tree
+p = urllib2.urlopen('http://www.capitalbikeshare.com/data/stations/bikeStations.xml')
+c = p.read()
+tree = ElementTree.parse(StringIO.StringIO(c))
 
 def slicedict(d, s):
 	return {k:v for k,v in d.iteritems() if k.startswith(s)}
 
-tree = prep_data("dataJune3.xml")
 
 
 
@@ -64,10 +68,5 @@ bikeshare_samaratin(52)
 
 
 
-#Compute distance from every other station and cache the ordered nearest station list for each station. Run once per (x period) to keep it up to date with new stations.
-
-#Computer ratio of bikes to empties.  Go from highest percentage to nearest lowest percentage. But give score by mulitplying by full size? Need to think more.
-
-#Then show which bikes need to be ridden (or driven) to which nearby stations.
 
 
